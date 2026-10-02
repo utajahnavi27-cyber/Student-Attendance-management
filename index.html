@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Student Attendance Management System</h1>
+            <p class="subtitle">Manage students and daily attendance</p>
+        </header>
+
+        <section class="add-section">
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Student Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="roll"
+                    placeholder="Enter Roll Number"
+                    required
+                >
+
+                <button type="submit" class="add-btn">
+                    Add Student
+                </button>
+            </form>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card total">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="summary-card present">
+                <h3>Present</h3>
+                <p id="presentCount">0</p>
+            </div>
+
+            <div class="summary-card absent">
+                <h3>Absent</h3>
+                <p id="absentCount">0</p>
+            </div>
+        </section>
+
+        <section class="attendance-section">
+            <h2>Student Attendance</h2>
+            <p class="date-label">
+                Attendance Date: <strong id="attendanceDate"></strong>
+            </p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Student Name</th>
+                            <th>Status</th>
+                            <TH>Attendance % </TH>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentList">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage" class="empty-message">
+                No students added yet.
+            </p>
+        </section>
+
+        <footer>
+            <p>Student Attendance Management System</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
